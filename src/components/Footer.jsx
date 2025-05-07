@@ -1,66 +1,70 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
-import { FaInstagram, FaTelegramPlane, FaApple, FaGooglePlay } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaTelegramPlane,
+  FaApple,
+  FaGooglePlay,
+} from "react-icons/fa";
 
 export default function Footer() {
-  const { t } = useTranslation("global");
-
   return (
-    <div className="bg-white text-[#8B8E99] mt-10 pt-10 pb-20 border-t border-[#36364033]">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-[90%] mx-auto">
+    <footer className="bg-white text-[#8B8E99] mt-10 pt-10 pb-20 border-t border-[#ddd] text-sm">
+      <div className="w-[90%] max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* About */}
         <div>
-          <h3 className="mb-5 font-bold text-[16px] text-black">{t("footer.about")}</h3>
-          <a href="https://uzum.uz/uz/about/delivery-points" className="block mb-2 hover:text-black transition">
-            {t("overview.location")}
+          <h3 className="mb-4 font-bold text-black text-base">Biz haqimizda</h3>
+          <a href="https://uzum.uz/uz/about/delivery-points" className="block mb-2 hover:text-black">
+            Yetkazib berish nuqtalari
           </a>
-          <a href="https://uzum.uz/uz/about/careers" className="block hover:text-black transition">
-            {t("footer.vacancy")}
+          <a href="https://uzum.uz/uz/about/careers" className="block hover:text-black">
+            Vakansiyalar
           </a>
         </div>
 
         {/* User */}
         <div>
-          <h3 className="mb-5 font-bold text-[16px] text-black">{t("footer.user")}</h3>
-          <a href="tel:+998781501115" className="block mb-2 hover:text-black transition">
-            {t("footer.contact")}
+          <h3 className="mb-4 font-bold text-black text-base">Foydalanuvchi</h3>
+          <a href="tel:+998781501115" className="block mb-2 hover:text-black">
+            Kontaktlar
           </a>
-          <a href="https://uzum.uz/uz/faq" className="block hover:text-black transition">
-            {t("overview.faq")}
+          <a href="https://uzum.uz/uz/faq" className="block hover:text-black">
+            Ko‘p so‘raladigan savollar
           </a>
         </div>
 
         {/* Business */}
         <div>
-          <h3 className="mb-5 font-bold text-[16px] text-black">{t("footer.business")}</h3>
-          <a href="https://seller.uzum.uz/" className="block mb-2 hover:text-black transition">
-            {t("footer.buyin")}
+          <h3 className="mb-4 font-bold text-black text-base">Biznes</h3>
+          <a href="https://seller.uzum.uz/" className="block mb-2 hover:text-black">
+            Sotuvchi bo‘lish
           </a>
-          <a href="https://seller.uzum.uz/seller/signin" className="block hover:text-black transition">
-            {t("footer.cabinet")}
+          <a href="https://seller.uzum.uz/seller/signin" className="block hover:text-black">
+            Shaxsiy kabinet
           </a>
         </div>
 
-        {/* Download + Media */}
+        {/* Download + Social */}
         <div>
-          <h3 className="mb-5 font-bold text-[16px] text-black">{t("footer.download")}</h3>
-          <div className="flex gap-4 mb-5">
+          <h3 className="mb-4 font-bold text-black text-base">Ilovani yuklab olish</h3>
+          <div className="flex flex-col gap-2 mb-6">
             <a
               href="https://apps.apple.com/ru/app/uzum-market"
               className="flex items-center gap-2 hover:text-black"
             >
-              <FaApple className="text-xl" /> App Store
+              <FaApple className="text-xl" />
+              App Store
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=uz.uzum.app"
               className="flex items-center gap-2 hover:text-black"
             >
-              <FaGooglePlay className="text-xl" /> Google Play
+              <FaGooglePlay className="text-xl" />
+              Google Play
             </a>
           </div>
 
-          <h3 className="mb-3 font-bold text-[16px] text-black">{t("footer.media")}</h3>
-          <div className="flex gap-4">
+          <h3 className="mb-3 font-bold text-black text-base">Ijtimoiy tarmoqlar</h3>
+          <div className="flex items-center gap-4">
             <a
               href="https://www.instagram.com/zon.uz"
               className="hover:text-pink-600"
@@ -80,6 +84,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
