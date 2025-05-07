@@ -11,6 +11,8 @@ import reducer, { INITIAL_STATE } from "./reducer/Reducer";
 import ProductInfo from "./pages/ProductInfo";
 import Carousel from "./components/Main";
 import ArticlesSection from "./components/ArticlesSection";
+import Slider from "./components/Slider";
+import InfoCards from "./components/carta";
 
 
 
@@ -32,7 +34,8 @@ export default function App() {
         <Overview />
         <Navbar />
 
-
+<Slider/>
+<InfoCards/>
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/liked" element={<Liked />}/>

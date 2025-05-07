@@ -56,7 +56,7 @@ export default function Product() {
                 <p className="text-[#1F2026] text-[16px] font-medium">
                   {`${item.price} so'm`}
                 </p>
-                <button onClick={() => addToBasket(item)}>
+                <button className="rounded-xl border-400" onClick={() => addToBasket(item)}>
                   {icons.basket}
                 </button>
               </div>

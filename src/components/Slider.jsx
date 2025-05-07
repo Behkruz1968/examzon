@@ -1,106 +1,55 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '@splidejs/react-splide/css';
-import '@splidejs/react-splide/css/core';
+import React, { useState, useEffect } from 'react';
 
-const SliderElements = [
-    {
-        id:1,
-        image: "https://images.uzum.uz/cq9utussslotj05kiad0/main_page_banner.jpg",
-    },
-    {
-        id:2,
-        image: "https://images.uzum.uz/cqa2354sslotj05kiqs0/main_page_banner.jpg",
-    },
-    {
-        id:3,
-        image: "https://images.uzum.uz/cpv9gs36eisq2rkdu350/main_page_banner.jpg",
-    },
-    {
-        id:4,
-        image: "https://images.uzum.uz/cq1uu8j6eisq2rked9vg/main_page_banner.jpg",
-    },
-    {
-        id:5,
-        image: "https://images.uzum.uz/cq1uv5b5qt1gj8ddqd2g/main_page_banner.jpg",
-    },
-    {
-        id:6,
-        image: "https://images.uzum.uz/cq17tkr6eisq2rke8dd0/main_page_banner.jpg",
-    },
-    {
-        id:7,
-        image: "https://images.uzum.uz/cpv9a2osarnfdo99n360/main_page_banner.jpg",
-    },
-    {
-        id:8,
-        image: "https://images.uzum.uz/cq2016j6eisq2rkedn9g/main_page_banner.jpg",
-    },
-    {
-        id:9,
-        image: "https://images.uzum.uz/cq204qb6eisq2rkedo6g/main_page_banner.jpg",
-    },
-    {
-        id:10,
-        image: "https://images.uzum.uz/cq2ic5b5qt1gj8ddu1a0/main_page_banner.jpg",
-    },
-    {
-        id:11,
-        image: "https://images.uzum.uz/cq15r2gsarnfdo9a11n0/main_page_banner.jpg",
-    },
-    {
-        id:12,
-        image: "https://images.uzum.uz/cq14lb36eisq2rke7l80/main_page_banner.jpg",
-    },
-    {
-        id:13,
-        image: "https://images.uzum.uz/cq14mib6eisq2rke7leg/main_page_banner.jpg",
-    },
-    {
-        id:14,
-        image: "https://images.uzum.uz/cq14vnr5qt1gj8ddlbug/main_page_banner.jpg",
-    },
-    {
-        id:15,
-        image: "https://images.uzum.uz/cq150rr6eisq2rke7np0/main_page_banner.jpg",
-    },
-    {
-        id:16,
-        image: "https://images.uzum.uz/cq151sr5qt1gj8ddlcqg/main_page_banner.jpg",
-    },
-    {
-        id:17,
-        image: "https://images.uzum.uz/cq152n0sarnfdo9a0qf0/main_page_banner.jpg",
-    },
-    {
-        id:18,
-        image: "https://images.uzum.uz/cq2me135qt1gj8ddv7gg/main_page_banner.jpg",
-    },
-    {
-        id:19,
-        image: "https://images.uzum.uz/cq1uvhgsarnfdo9a64rg/main_page_banner.jpg",
-    },
+const images = [
+  "https://zon.uz/_next/static/media/med-texnika.ce3e7d78.webp",
+  "https://zon.uz/_next/static/media/inverter_protech-desktop.f5a74588.webp",
+  "https://zon.uz/_next/static/media/dewalt_new_desktop.1a3adcaf.webp",
 ];
 
-export default function Slider() {
+const Slider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  // Auto slide every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000);
+
+    // To clean up the interval on component unmount
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   return (
-    <div className="pb-7 w-[90%] m-auto">
-        <Splide
-            options={{
-                type: 'loop',
-            }}
-            aria-label="My Favorite Images"
-        >
-            {SliderElements.map((item) => {
-                return (
-                    <SplideSlide key={item.id}>
-                        <Link to={`slider/${item.id}`}>
-                            <img src={item.image} alt={`slider-${item.id}`} />
-                        </Link>
-                    </SplideSlide>
-                );
-            })}
-        </Splide>
+    <div className="relative w-full h-[400px] overflow-hidden">
+      <img
+        src={images[currentIndex]}
+        alt={`Slide ${currentIndex + 1}`}
+        className="w-full h-full object-cover transition duration-500"
+      />
+      {/* Prev Button */}
+      <button
+        onClick={prevSlide}
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-full"
+      >
+        ‹
+      </button>
+      {/* Next Button */}
+      <button
+        onClick={nextSlide}
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-full"
+      >
+        ›
+      </button>
     </div>
   );
 };
+
+export default Slider;
