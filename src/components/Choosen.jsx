@@ -109,10 +109,10 @@ export default function Choosen() {
 
                         <div className="w-[150px]">
                           <p className="text-xl text-end font-semibold text-[#1F2026]">
-                            {`${item.price} $`}
+                            {`${item.price} so'm`}
                           </p>
                           <p className="text-[14px] text-end leading-[18px] font-normal text-[#8B8E99] line-through">
-                            {`${item.oldPrice} $`}
+                            {`${item.oldPrice} so'm`}
                           </p>
                         </div>
                       </div>

@@ -42,25 +42,17 @@ export default function Likedcard() {
                   <h3 className="text-md font-semibold text-[#1F2026] mb-1">
                     {item.title?.slice(0, 20)}...
                   </h3>
-                  <div className="flex items-center gap-1 mb-2">
-                    <span className="translate-y-[-1px]">{icons.star}</span>
-                    <span className="text-sm text-[#8B8E99] font-light">
-                      {item.rating.rate}
-                    </span>
-                    <span className="text-sm text-[#8B8E99] font-light">
-                      {`(${item.ratingVoice} sharh)`}
-                    </span>
-                  </div>
+             
                   <div className="py-1 px-2 bg-[#FFFF00] text-[14px] leading-[17px] font-medium inline-block rounded-md mb-4">
                     {`${(item.price / 12).toFixed(2)} usd/month`}
                   </div>
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-[14px] leading-[18px] font-normal text-[#8B8E99] line-through">
-                        {`${item.oldPrice} $`}
+                        {`${item.oldPrice} so'm`}
                       </p>
                       <p className="text-[#1F2026] text-[16px] leading-[20px] font-medium">
-                        {`${item.price} $`}
+                        {`${item.price}so'm`}
                       </p>
                     </div>
                   </div>

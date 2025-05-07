@@ -1,55 +1,41 @@
 {
     "overview": {
-        "city": "Город ",
-        "region": "Ташкент",
-        "location": "Продавайтена Zon.uz   ",
-        "message": "Покупка как юрлицо",
-        "message2":"Помощь",
-        "message3":"Контакты",
-        "faq": "Savol-javoblar",
-        "order": "Buyurtmalarim"
+      "city": "Город",
+      "region": "Ташкент",
+      "location": "Продавайте на Zon.uz",
+      "message": "Покупка как юрлицо",
+      "message2": "Помощь",
+      "message3": "Контакты",
+      "faq": "Вопрос-ответ",
+      "order": "Мои заказы"
     },
-
+  
     "navbar": {
-        "modal": "Katalog",
-        "input": "Mahsulotlar va turkumlar izlash",
-        "enter": "Kirish",
-        "liked": "Saralanganlar",
-        "savat": "Savat"
+      "modal": "Каталог",
+      "input": "Поиск товаров и категорий",
+      "enter": "Войти",
+      "liked": "Избранное",
+      "savat": "Корзина"
     },
-
-    "main": {
-   
-            "all": "Hammasi",
-            "keyboards": "Klaviaturalar",
-            "mice": "Sichqonchalar",
-            "headphones": "Naushniklar",
-            "webcams": "Veb-kameralar",
-            "microphones": "Mikrofonlar",
-            "monitors": "Monitorlar",
-            "storages": "Xotira qurilmalari (HDD/SSD)"
-           
-          
-          
-    },
-
+  
     "footer": {
-        "about": "Biz haqimizda",
-        "vacancy": "Vakansiyalar",
-        "user": "Foydalanuvchilarga",
-        "contact": "Biz bilan bogʻlanish",
-        "business": "Tadbirkorlarga",
-        "buyin": "ZONda soting",
-        "cabinet": "Sotuvchi kabinetiga kirish",
-        "download": "Ilovani yuklab olish",
-        "media": "«ZON.UZ» ijtimoiy tarmoqlarda",
-        "agreement":"Maxfiylik kelishuvi",
-        "agreement2":"Foydalanuvchi kelishuvi",
-        "protection":"«2025© XK MCHJ «ZON.UZ». STIR 309376127. Barcha huquqlar himoyalangan»"
+      "about": "О нас",
+      "vacancy": "Вакансии",
+      "user": "Пользователям",
+      "contact": "Связаться с нами",
+      "business": "Для предпринимателей",
+      "buyin": "Продавайте на ZON",
+      "cabinet": "Вход в кабинет продавца",
+      "download": "Скачать приложение",
+      "media": "«ZON.UZ» в социальных сетях",
+      "agreement": "Политика конфиденциальности",
+      "agreement2": "Пользовательское соглашение",
+      "protection": "«2025© ООО «ZON.UZ». ИНН 309376127. Все права защищены»"
     },
-
+  
     "basket": {
-        "yours": "Savatingiz",
-        "product": "mahsulot"
+      "yours": "Ваша корзина",
+      "product": "товар"
     }
-}
+  }
+  

@@ -19,11 +19,11 @@ export default function Overview() {
             {icons.qol}
             <span className='font-medium'>{t('overview.location')}</span>
           </div>
-     <div className='flex gap-9 ml-4'>
+     <div className='flex gap-9 ml-4 cursor-pointer'>
    {icons.sumka}
-     <span className='text-[#8B8E99] -ml-4 '>{t("overview.message")}</span>
-          <span className='text-[#8B8E99]'>{t("overview.message2")}</span>
-          <span className='text-[#8B8E99]'>{t("overview.message3")}</span>
+     <span className=' cursor-pointer text-[#8B8E99] -ml-4 '>{t("overview.message")} </span>
+          <span className='cursor-pointer text-[#8B8E99]'>{t("overview.message2")}</span>
+          <span className='cursor-pointer text-[#8B8E99]'>{t("overview.message3")}</span>
      </div>
         </div>
 

@@ -10,6 +10,7 @@ import Choose from "./pages/Choose";
 import reducer, { INITIAL_STATE } from "./reducer/Reducer";
 import ProductInfo from "./pages/ProductInfo";
 import Carousel from "./components/Main";
+import ArticlesSection from "./components/ArticlesSection";
 
 
 
@@ -38,7 +39,7 @@ export default function App() {
           <Route path="/saved" element={<Choose />}/>
           <Route path="/productInfo/:id" element={<ProductInfo />}/>
         </Routes>
-
+<ArticlesSection/>
         <Footer />
       </Contexts.Provider>
     </div>

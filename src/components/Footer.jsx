@@ -62,7 +62,7 @@ export default function Footer() {
           <h3 className="mb-3 font-bold text-[16px] text-black">{t("footer.media")}</h3>
           <div className="flex gap-4">
             <a
-              href="https://www.instagram.com/uzum.market/"
+              href="https://www.instagram.com/zon.uz"
               className="hover:text-pink-600"
               target="_blank"
               rel="noopener noreferrer"
@@ -70,7 +70,7 @@ export default function Footer() {
               <FaInstagram className="text-2xl" />
             </a>
             <a
-              href="https://t.me/uzum_market"
+              href="https://t.me/zonuzofficial"
               className="hover:text-blue-500"
               target="_blank"
               rel="noopener noreferrer"
